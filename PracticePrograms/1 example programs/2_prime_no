@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+
+static int count=2;
+bool prime(n)
+{
+	if(count>(n/2))
+		return false;
+	else if(n%count != 0)
+		return true;
+	else
+	{ 
+	   count++;
+	   prime(n);
+	}
+}
+int main()
+{
+	int n;
+	cout<<"enter the no. of which you want to check prime no.";
+	cin>>n;
+	bool flag=prime(n);
+	if(flag)
+		cout<<"prime no.";
+	else
+		cout<<"not an prime no.";
+}
